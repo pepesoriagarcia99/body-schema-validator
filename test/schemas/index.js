@@ -48,7 +48,18 @@ const numberRangeSchematics = {
   }
 };
 
-/** Experimental */
+const matchSchematics = {
+  email : {
+    type     : String,
+    match    : /^\S+@\S+\.\S+$/,
+    required : true
+  }
+};
+
+/**
+ * * Experimental
+ * TODO: Date range with different formats
+*/
 const dateRangeSchematics = {
   value : {
     type : Date,
@@ -122,6 +133,7 @@ export default {
   enumSchematics,
   stringRangeSchematics,
   numberRangeSchematics,
+  matchSchematics,
   dateRangeSchematics,
   customValidationSchematics,
   actionsSchematics,
