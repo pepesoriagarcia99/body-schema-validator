@@ -1,23 +1,33 @@
 {
-  "name": "oneo",
+  "name": "bodyschema",
   "version": "0.1.0",
   "private": true,
-  "description": "API for oneo",
-  "author": "Jose Eduardo <jesoria@indra.es>",
+  "description": "Body parser middleware for MongoDB, Express and Nodejs",
+  "author": "Jose Eduardo Soria <pepesoriagarcia99@gmail.com>",
+  "license": "MIT",
   "files": [
     "src/"
   ],
+  "keywords": [
+    "body",
+    "request",
+    "mongo",
+    "mongodb",
+    "mongoose",
+    "express",
+    "node",
+    "nodejs",
+    "query",
+    "middleware",
+    "param"
+  ],
   "main": "src/index.js",
   "scripts": {
-    "start": "node dist/index.js",
     "dev": "nodemon -i \"*.test.js\" --exec babel-node src/index.js",
     "build": "babel src --out-dir dist --ignore src/**/*.test.js",
-    "prod": "cross-env NODE_ENV=production node dist/index.js",
     "lint": "eslint src",
     "test": "mocha src/api/*/*.test.js --require @babel/register --exit",
-    "coverage": "nyc --reporter=text npm test",
-    "docs": "apidoc -i src -o docs && apidoc-markdown -p docs -o DOCS.md",
-    "postdocs": "opn docs/index.html"
+    "coverage": "nyc --reporter=text npm test"
   },
   "devDependencies": {
     "@babel/cli": "~7.19.3",
@@ -26,31 +36,16 @@
     "@babel/plugin-transform-runtime": "~7.19.6",
     "@babel/preset-env": "~7.19.4",
     "@babel/register": "~7.18.9",
-    "apidoc": "~0.17.6",
-    "apidoc-markdown": "~0.2.0",
     "babel-eslint": "~10.1.0",
-    "chai": "~4.3.6",
     "cross-env": "~7.0.3",
     "dotenv-safe": "~4.0.3",
     "eslint": "~8.26.0",
     "eslint-config-prettier": "~8.5.0",
-    "mocha": "~10.1.0",
     "nodemon": "~1.10.2",
-    "nyc": "~15.1.0",
-    "opn-cli": "~3.1.0",
-    "prettier": "~2.7.1",
-    "supertest": "~6.3.1"
+    "prettier": "~2.7.1"
   },
   "dependencies": {
-    "@babel/runtime": "~7.19.4",
-    "bodymen": "~1.1.1",
-    "compression": "~1.7.4",
-    "cors": "~2.8.5",
-    "crypto": "~1.0.1",
-    "express": "~4.17.3",
-    "express-ws": "~5.0.2",
-    "morgan": "~1.10.0",
-    "querymen": "~2.1.4"
+    "@babel/runtime": "~7.19.4"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
