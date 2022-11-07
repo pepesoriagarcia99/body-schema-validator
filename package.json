@@ -21,12 +21,10 @@
     "middleware",
     "param"
   ],
-  "main": "src/index.js",
   "scripts": {
-    "dev": "nodemon -i \"*.test.js\" --exec babel-node src/index.js",
-    "build": "babel src --out-dir dist --ignore src/**/*.test.js",
+    "build": "babel src --out-dir dist",
     "lint": "eslint src",
-    "test": "mocha src/api/*/*.test.js --require @babel/register --exit",
+    "test": "mocha ./**/*.test.js --require @babel/register --exit",
     "coverage": "nyc --reporter=text npm test"
   },
   "devDependencies": {
@@ -41,8 +39,10 @@
     "dotenv-safe": "~4.0.3",
     "eslint": "~8.26.0",
     "eslint-config-prettier": "~8.5.0",
-    "nodemon": "~1.10.2",
-    "prettier": "~2.7.1"
+    "prettier": "~2.7.1",
+    "nyc": "~15.1.0",
+    "mocha": "~10.1.0",
+    "chai": "~4.3.6"
   },
   "dependencies": {
     "@babel/runtime": "~7.19.4"
