@@ -1,7 +1,5 @@
 # body-schema-validator
 
-[![NPM version][npm-image]][npm-url]
-
 ## Install
 
 ```sh
