@@ -1,4 +1,4 @@
-import Validator from 'src/model/Validator';
+import Validator from './model/Validator';
 
 /**
  * Middleware
