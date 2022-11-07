@@ -1,6 +1,6 @@
 {
   "name": "body-schema-validator",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Body parser middleware for MongoDB, Express and Nodejs",
   "author": "Jose Eduardo Soria <pepesoriagarcia99@gmail.com>",
   "license": "MIT",
@@ -24,7 +24,7 @@
   "scripts": {
     "build": "babel src --out-dir dist",
     "lint": "eslint src",
-    "test": "mocha ./**/*.test.js --require @babel/register --exit",
+    "test": "mocha test/*.test.js --require @babel/register --exit",
     "coverage": "nyc --reporter=text npm test"
   },
   "devDependencies": {
